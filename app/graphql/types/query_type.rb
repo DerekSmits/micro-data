@@ -14,18 +14,9 @@ module Types
     def test_field
       "Hello World!"
     end
-    # field :user, Types::UserType, "Find user by id", null: false do
-    #   argument :id, ID, required: true
-    # end
-    # def user(id:)
-    #   User.find(id).as_json
-    # end
+
     field :user, resolver: Queries::UserQuery
     field :users, resolver: Queries::UsersQuery
     field :post, resolver: Queries::PostQuery
     end
-    def post(id:)
-      Post.find(id).as_json
-    end
   end
-end
