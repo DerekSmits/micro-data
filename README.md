@@ -1,24 +1,12 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Micro-data
+A part of microservices. That part give data from database and put data in it using GraphQL queries
+* Ruby: ruby 3.0.0
+* Installing
+    * git clone <URL of project>
+    * bundle install
+* Database initialize:
+    * rails db:create
+    * rails db:migrate
+* Run tests:
+    * rspec
+    * You can find text coverage open **coverage/index.html**
