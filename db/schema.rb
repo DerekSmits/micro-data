@@ -29,6 +29,14 @@ ActiveRecord::Schema.define(version: 2022_03_10_224415) do
     t.string "bio"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "provider", default: "email", null: false
+    t.string "uid", default: "", null: false
+    t.boolean "allow_password_change", default: false
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string "unconfirmed_email"
+    t.json "tokens"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"

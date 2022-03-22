@@ -52,3 +52,6 @@ gem "graphiql-rails"
 gem 'pg'
 
 gem 'sass-rails'
+gem "graphql_devise", "~> 0.11.4"
+
+gem "omniauth", "~> 2.0"
