@@ -86,11 +86,11 @@ GEM
     graphiql-rails (1.8.0)
       railties
       sprockets-rails
-    graphql (2.0.2)
-    graphql_devise (0.11.4)
-      devise_token_auth (>= 0.1.43)
-      graphql (>= 1.8)
-      rails (>= 4.2)
+    graphql (1.13.11)
+    graphql_devise (0.18.2)
+      devise_token_auth (>= 0.1.43, < 2.0)
+      graphql (>= 1.8, < 1.14.0)
+      rails (>= 4.2, < 6.2)
     hashie (5.0.0)
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
@@ -218,8 +218,8 @@ DEPENDENCIES
   byebug
   devise
   graphiql-rails
-  graphql (>= 2.0.0)
-  graphql_devise (~> 0.11.4)
+  graphql (~> 1.13, >= 1.13.11)
+  graphql_devise (>= 0.18.2)
   listen (~> 3.3)
   omniauth (~> 2.0)
   pg

@@ -45,13 +45,14 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
 
-gem 'graphql', '>= 2.0.0'
+gem 'graphql', '~> 1.13', '>= 1.13.11'
 
 gem "graphiql-rails"
 
 gem 'pg'
 
 gem 'sass-rails'
-gem "graphql_devise", "~> 0.11.4"
+
+gem "graphql_devise", ">= 0.18.2"
 
 gem "omniauth", "~> 2.0"

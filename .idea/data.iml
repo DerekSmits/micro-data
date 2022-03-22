@@ -54,8 +54,8 @@
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.15.5, RVM: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v1.0.0, RVM: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="graphiql-rails (v1.8.0, RVM: ruby-3.0.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="graphql (v2.0.2, RVM: ruby-3.0.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="graphql_devise (v0.11.4, RVM: ruby-3.0.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="graphql (v1.13.10, RVM: ruby-3.0.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="graphql_devise (v0.18.2, RVM: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hashie (v5.0.0, RVM: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v1.10.0, RVM: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="listen (v3.7.1, RVM: ruby-3.0.0) [gem]" level="application" />
@@ -522,6 +522,18 @@
           </RakeTaskImpl>
           <RakeTaskImpl description="" fullCommand="default" id="default" />
           <RakeTaskImpl description="" fullCommand="environment" id="environment" />
+          <RakeTaskImpl id="graphql">
+            <subtasks>
+              <RakeTaskImpl description="" fullCommand="graphql:upgrade" id="upgrade" />
+              <RakeTaskImpl id="upgrade">
+                <subtasks>
+                  <RakeTaskImpl description="" fullCommand="graphql:upgrade:create_base_objects" id="create_base_objects" />
+                  <RakeTaskImpl description="" fullCommand="graphql:upgrade:member" id="member" />
+                  <RakeTaskImpl description="" fullCommand="graphql:upgrade:schema" id="schema" />
+                </subtasks>
+              </RakeTaskImpl>
+            </subtasks>
+          </RakeTaskImpl>
           <RakeTaskImpl id="railties">
             <subtasks>
               <RakeTaskImpl id="install">
