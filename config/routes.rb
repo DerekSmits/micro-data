@@ -4,9 +4,10 @@ Rails.application.routes.draw do
     at: "/auth",
     authenticatable_type: Types::UserType,
     operations: {
-      login: GraphqlDevise::Mutations::Login
+      login: GraphqlDevise::Mutations::Login,
+      register: GraphqlDevise::Mutations::Register
     },
-    skip: [:register]
+    # skip: [:register]
   )
   devise_for :users
   post "/graphql", to: "graphql#execute"
