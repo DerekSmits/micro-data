@@ -217,6 +217,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   devise
+  devise_token_auth
   graphiql-rails
   graphql (~> 1.13, >= 1.13.11)
   graphql_devise (>= 0.18.2)

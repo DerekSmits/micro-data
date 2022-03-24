@@ -56,3 +56,5 @@ gem 'sass-rails'
 gem "graphql_devise", ">= 0.18.2"
 
 gem "omniauth", "~> 2.0"
+
+gem 'devise_token_auth'
