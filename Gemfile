@@ -45,10 +45,13 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
 
-gem 'graphql', '>= 2.0.0'
+gem "devise-token_authenticatable"
+
+gem 'graphql'#, '>= 2.0.0'
 
 gem "graphiql-rails"
 
 gem 'pg'
 
 gem 'sass-rails'
+
