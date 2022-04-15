@@ -3,6 +3,9 @@ class PostController < ApplicationController
     Post.all
   end
   def create
+    unless user_signed_in?
+
+    end
     current_user.posts.create!(post_params)
   end
   def update

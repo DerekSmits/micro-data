@@ -3,13 +3,13 @@ module Mutations
     argument :title, String, required: true
     argument :short, String, required: true
     argument :post, String, required: true
-    argument :user_id, Integer, required: true
+    # argument :user_id, Integer, required: true
 
     type Types::PostType
 
     def resolve(title: nil, short: nil, post: nil, user_id: nil)
-      @user = User.find(user_id)
-      @user.posts.create!(
+      byebug
+      context[:current_user].posts.create!(
         title: title,
         short: short,
         post: post,

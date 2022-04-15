@@ -47,7 +47,7 @@ gem 'devise'
 
 gem "devise-token_authenticatable"
 
-gem 'graphql'#, '>= 2.0.0'
+gem 'graphql'
 
 gem "graphiql-rails"
 

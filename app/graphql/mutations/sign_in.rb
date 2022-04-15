@@ -12,6 +12,7 @@ module Mutations
       if user.present?
         if user.valid_password?(args[:password])
           context[:current_user] = user
+          byebug
           MutationResult.call(obj: { user: user }, success: true)
         else
           GraphQL::ExecutionError.new("Incorrect Email/Password")
