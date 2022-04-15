@@ -8,7 +8,6 @@ module Mutations
     type Types::PostType
 
     def resolve(title: nil, short: nil, post: nil, user_id: nil)
-      byebug
       context[:current_user].posts.create!(
         title: title,
         short: short,
