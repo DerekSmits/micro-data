@@ -25,7 +25,18 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.navigational_formats = []
 
+  config.jwt do |jwt|
+    jwt.secret = ENV['d41dd97ea5536323ca6485cc07564ad298c9af0dc03eacb382e7c65a2718d6662762de45dbb518fbdab5abe9f77b79745ddfc0c10468c88086add5fa5cb719f1']
+    jwt.dispatch_requests = [
+      ['POST', %r{^/login$}]
+    ]
+    jwt.revocation_requests = [
+      ['DELETE', %r{^/logout$}]
+    ]
+    jwt.expiration_time = 5.minutes.to_i
+  end
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
